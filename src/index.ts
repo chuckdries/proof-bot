@@ -15,8 +15,12 @@ const NUMS = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", 
 
 client.on("messageCreate", (message) => {
   if ((message.channel as TextChannel)?.name === "proofs") {
-    for (let i = 0; i < message.attachments.size; i++) {
-      message.react(NUMS[i]);
+    for (let i = 0; i < Math.min(10, message.attachments.size); i++) {
+      try {
+        message.react(NUMS[i]);
+      } catch (e) {
+        console.error(e);
+      }
     }
   }
 });
