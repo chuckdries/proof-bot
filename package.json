@@ -2,6 +2,7 @@
   "name": "proof-bot",
   "version": "1.0.0",
   "main": "src/index.ts",
+  "repository": "github:chuckdries/proof-bot",
   "author": "Chuck Dries <chuck@chuckdries.com>",
   "license": "MIT",
   "dependencies": {
