@@ -4,7 +4,7 @@ The idea is for photography discords - you post your pictures in a channel calle
 
 To invite this bot to your server, go to https://discord.com/api/oauth2/authorize?client_id=969443608639963206&permissions=64&scope=bot
 
-To host this bot yourself, create a file called `.env` with
+To host this bot yourself, set an environment variable with your bot token
 ```
 BOT_TOKEN=<your discord bot token here>
 ```
