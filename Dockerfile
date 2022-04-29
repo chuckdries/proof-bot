@@ -2,9 +2,10 @@ FROM node:18 AS build
 
 WORKDIR /proofbot
 
-ADD . .
-
+ADD package.json .
 RUN yarn
+
+ADD . .
 
 RUN yarn build
 
@@ -13,8 +14,8 @@ FROM node:18
 WORKDIR /proofbot
 
 COPY --from=build /proofbot/package.json .
-COPY --from=build /proofbot/dist ./dist
-
 RUN yarn --production
+
+COPY --from=build /proofbot/dist ./dist
 
 CMD ["node", "dist/index.js"]
