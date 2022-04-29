@@ -12,8 +12,7 @@ client.once("ready", (c) => {
 const NUMS = ["1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "8️⃣", "9️⃣", "🔟"]
 
 client.on("messageCreate", (message) => {
-  const channel = client.channels.cache.get(message.channelId)
-  if((channel as TextChannel)?.name === 'proofs') {
+  if((message.channel as TextChannel)?.name === 'proofs') {
     for (let i = 0; i < message.attachments.size; i++) {
       message.react(NUMS[i]);
     }
