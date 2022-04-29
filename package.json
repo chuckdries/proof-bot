@@ -1,0 +1,23 @@
+{
+  "name": "proof-bot",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "author": "Chuck Dries <chuck@chuckdries.com>",
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^1.0.0",
+    "nodemon": "^2.0.15",
+    "prettier": "2.6.2",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.4"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.ts",
+    "build": "tsc",
+    "format": "prettier --write src"
+  }
+}
